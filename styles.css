@@ -368,6 +368,7 @@ margin-top: 20px;
 .button-content {
   position: relative;
   z-index: 1;
+  color: #101010;
 }
 
 .button-d::before {
