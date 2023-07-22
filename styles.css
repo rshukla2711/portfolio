@@ -33,9 +33,10 @@ p{
   font-size: 20px;
 }
 /* ==============================================NAVBAR=============================================================== */
-.nav{
+.navbar{
   background-color: rgba(0,0,0,0.3);
   margin-bottom: 0%;
+  z-index: 1000;
 }
 ul {
   list-style-type: none;
@@ -57,7 +58,12 @@ li {
 
 }
 li a:hover {
-  background-color: #1050d9a1;
+  background-color: #565c69a1;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .hamburger {
   display: none;
@@ -73,50 +79,65 @@ li a:hover {
   background-color: #101010;
 }
 .nav-menu {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-item {
-margin-left: 5rem;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .nav-link{
-font-size: 1.6rem;
-font-weight: 400;
-color: #475569;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: black;
 }
 
 .nav-link:hover{
-color: #482ff7;
+  color: #482ff7;
 }
-.nav-menu .icon {
-display: none;
+
+@media only screen and (max-width: 981px) {
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 0rem;
+      flex-direction: column;
+      background-color: #ffffff;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+          0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 2.5rem 0;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
 }
-.nav-menu a.active{
-color: white;
-background-color: #482ff7;
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
 }
-@media screen and (max-width: 600px) {
-.nav-menu a:not(:first-child) {display: none;}
-.nav-menu a.icon {
-  float: right;
-  display: block;
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
-}
-@media screen and (max-width: 600px) {
-.nav-menu.responsive {position: relative;}
-.nav-menu.responsive .icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.nav-menu.responsive a {
-  float: none;
-  display: block;
-  text-align: left;
-}
+
+
 }
 .sticky {
   position: fixed;
@@ -166,7 +187,7 @@ background-color: #482ff7;
   }
 }
 .home{
-  color: #999;
+  color: #4A55A2;
   font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   text-align: center;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
@@ -232,7 +253,7 @@ background-color: #482ff7;
 
   
   .about{
-    background-color: #FEFCF3;
+    background-color: #AA96DA;
     background-size: cover;
   }
   .myself {
@@ -401,7 +422,7 @@ margin-top: 20px;
 
 
   .skills{
-    background-color: #FEFBE7;
+    background-color: #82AAE3;
     background-size: cover;
     
   }
@@ -410,7 +431,7 @@ margin-top: 20px;
     grid-template-columns: auto auto auto auto;
     border-radius: 25px;
     box-shadow: 5px 5px 25px 0px rgba(46, 73, 56, 0.922);
-    background-color: #ca1720a1;
+    background-color: #CADEFC;
     height: 550px;
     margin: auto;
     margin-top: 100px;
@@ -430,7 +451,7 @@ margin-top: 20px;
     height: 110px;
     width: 110px;
     border-radius: 25px;
-    background: #316967;
+    background: #A8D8EA;
     padding: 10px;
     box-shadow: 5px 5px 25px 0px rgba(46, 73, 56, 0.922);
   }
@@ -440,6 +461,18 @@ margin-top: 20px;
   }
 
   /* =========================================PROJECTS================================================================== */
+  .Projects{
+    background-color: #0079FF;
+  }
+  .project-img{
+    
+    margin-top: 10px;
+    width: 520px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+  }
   .carousel-wrapper-2 {
     width: 720px;
     height: 650px;
@@ -449,7 +482,7 @@ margin-top: 20px;
     box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
     border-radius: 20px;
     margin: 10px auto 20px;
-    background-color: #CDF0EA;
+    background-color: #FFE79B;
     background-size: cover;
   }
   .carousel-container-2 {
@@ -589,7 +622,7 @@ margin-top: 20px;
     margin-top: 50px;
  }
  .Contacts{
-  background-color: #E8F6EF;
+  background-color: #FF8400;
   background-size: cover;
  }
 
