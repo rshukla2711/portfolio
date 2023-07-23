@@ -72,7 +72,7 @@ li a:hover {
 .bar {
   display: block;
   width: 25px;
-  height: 3px;
+  height: 5px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -124,17 +124,18 @@ li a:hover {
   .hamburger {
       display: block;
       cursor: pointer;
+      margin-left: 10px;
   }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
 
 .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 
@@ -245,6 +246,25 @@ li a:hover {
     border-right-color: transparent;
   }
 }
+@media only screen and (max-width: 981px) {
+  .bgimg {
+    width: 80%; 
+  }
+  
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  }
+  .int {
+    font-size: 40px; 
+  }.int2{
+    font-size: 10px;
+  }
+}
 
 
 
@@ -322,53 +342,71 @@ transform: scale(1.04);
     transform: translateX(0);
  }
 }
-@media screen and (max-width: 768px) {
-  .carousel-wrapper {
-    width: 312px;
-    height: 210px;
- }
-  .carousel-container {
-    width: 240px;
-    height: 150px;
- }
-  .carousel {
-    width: 720px;
- }
-  .carousel > div {
-    width: 240px;
-    height: 150px;
- }
-  @keyframes sliding {
-    30% {
-      transform: translateX(0);
-   }
-    35% {
-      transform: translateX(-240px);
-   }
-    65% {
-      transform: translateX(-240px);
-   }
-    70% {
-      transform: translateX(-480px);
-   }
-    98% {
-      transform: translateX(-480px);
-   }
-    100% {
-      transform: translateX(0);
-   }
- }
-}
 .edu-img{
-height:125px;
-width:125px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-.edu-para{
-margin-top: 20px;
-}
+  height:125px;
+  width:125px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .edu-para{
+  margin-top: 20px;
+  }
+  @media screen and (max-width: 981px) {
+    .carousel-wrapper {
+      width: 312px;
+      height: 250px;
+    }
+    .carousel-container {
+      width: 312px;
+      height: 220px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    .carousel {
+      width: 936px; 
+      display: flex;
+      animation: sliding 10s infinite;
+    }
+    .carousel > div {
+      width: 312px; 
+      height: 170px;
+      display: flex;
+    }
+    .edu-img {
+      height: 120px;
+      width: 120px;
+      margin-top: 0%;
+    }
+    .edu-para {
+      font-size: 15px;
+      margin-top: 0;
+    }
+    @keyframes sliding {
+      0% {
+        transform: translateX(0);
+      }
+      30% {
+        transform: translateX(0); 
+      }
+      35% {
+        transform: translateX(-312px); 
+      }
+      65% {
+        transform: translateX(-312px);
+      }
+      70% {
+        transform: translateX(-624px); 
+      }
+      98% {
+        transform: translateX(-624px); 
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+
 .button-d {
   position: relative;
   overflow: hidden;
@@ -415,6 +453,18 @@ margin-top: 20px;
   margin-top: 30px;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 981px) {
+  .bgimg {
+    width: 80%; 
+  }
+  .my-head {
+    font-size: 30px; 
+  }.my-para{
+    font-size: 15px;
+  }.topic{
+    font-size: 24px;
+  }
+}
 
     /* ==========================================SKILLS=============================================================== */ 
 
@@ -458,6 +508,23 @@ margin-top: 20px;
   .my-skills:hover{
     cursor: pointer;
     transform: scale(1.08);
+  }
+  @media only screen and (max-width: 981px) {
+    .skills-p {
+      grid-template-columns: auto;
+      width: 80%;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .my-skills {
+      width: 110px;
+      height: 110px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   /* =========================================PROJECTS================================================================== */
@@ -529,22 +596,37 @@ margin-top: 20px;
   }
   
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 981px) {
     .carousel-wrapper-2 {
-      width: 312px;
-      height: 210px;
+      width: 500px;
+      height: 600px;
+      align-items: center;
    }
     .carousel-container-2 {
-      width: 240px;
-      height: 210px;
+      width: 500px;
+      height: 500px;
+      overflow: hidden;
+      
    }
     .carousel-2 {
-      width: 720px;
+      width: 1000px;
+      display: flex;
+      animation: sliding-2 10s infinite;
    }
-    .carousel-2 > div {
-      width: 240px;
-      height: 210px;
+    .carousel-2 > div  {
+      width: 500px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
    }
+   
+   .project-img{
+    margin-top: 10px;
+    width: 360px;
+    height: 200px;
+  }
    @keyframes sliding-2 {
     0% {
       transform: translateX(0);
@@ -553,14 +635,22 @@ margin-top: 20px;
       transform: translateX(0);
     }
     50% {
-      transform: translateX(-240px);
+      transform: translateX(-500px);
     }
     80% {
-      transform: translateX(-240px);
+      transform: translateX(-500px);
     }
     100%{
       transform: translateX(0px);
     }
+  }
+  .p-title{
+    font-size: 24px;
+  }
+  .p-title2{
+    font-size: 20px;
+  }.project-para{
+    font-size: 10px;
   }
   }
   .button-89 {
@@ -602,7 +692,7 @@ margin-top: 20px;
   .links{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 80px ;
+    margin-top: 10px ;
   }
   /* ==========================================CONTACTS=============================================================== */ 
  .soc{
@@ -622,9 +712,21 @@ margin-top: 20px;
     margin-top: 50px;
  }
  .Contacts{
-  background-color: #FF8400;
+  background-color: #FE6244;
   background-size: cover;
  }
-
+ @media only screen and (max-width: 981px) {
+  .soc {
+    width: 60px;
+    height: 60px;
+  }
+  .social {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }.mail{
+    color: black;
+  text-decoration: none;
+  }
+}
 
 
